@@ -1,20 +1,25 @@
 package Text::Phonetic::VideoGame;
-
 use warnings;
 use strict;
+use base 'Text::Phonetic';
 
-=head1 NAME
-
-Text::Phonetic::VideoGame - The great new Text::Phonetic::VideoGame!
-
-=head1 VERSION
-
-Version 0.01
-
-=cut
+use String::Nysiis;
 
 our $VERSION = '0.01';
 
+sub _do_encode {
+    my ( $self, $string ) = @_;
+    $string =~ s/\s+/ /g;
+    my @words = split / /, $string;
+    my @encodings = map { String::Nysiis::nysiis($_) } @words;
+    return join ' ', @encodings;
+}
+
+1;
+
+=head1 NAME
+
+Text::Phonetic::VideoGame - phonetic encoding for video game titles
 
 =head1 SYNOPSIS
 
@@ -36,37 +41,23 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head2 function1
 
-=cut
-
-sub function1 {
-}
-
-=head2 function2
-
-=cut
-
-sub function2 {
-}
-
 =head1 AUTHOR
 
-Michael Hendricks, C<< <michael at ndrix.org> >>
+Michael Hendricks, C<< <michael@ndrix.org> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-text-phonetic-videogame at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Text-Phonetic-VideoGame>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-
-
+Please report any bugs or feature requests to C<bug-text-phonetic-videogame at
+rt.cpan.org>, or through the web interface at
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Text-Phonetic-VideoGame>.  I
+will be notified, and then you'll automatically be notified of progress on
+your bug as I make changes.
 
 =head1 SUPPORT
 
 You can find documentation for this module with the perldoc command.
 
     perldoc Text::Phonetic::VideoGame
-
 
 You can also look for information at:
 
@@ -98,9 +89,4 @@ L<http://search.cpan.org/dist/Text-Phonetic-VideoGame/>
 
 Copyright 2009 Michael Hendricks, all rights reserved.
 
-This program is released under the following license: mit
-
-
-=cut
-
-1; # End of Text::Phonetic::VideoGame
+This program is released under the following license: MIT

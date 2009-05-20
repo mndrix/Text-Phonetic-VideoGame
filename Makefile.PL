@@ -7,7 +7,9 @@ license  'mit';
 
 build_requires 'Test::More';
 
+requires 'Text::Phonetic';
+requires 'String::Nysiis';
+
 auto_install;
 
 WriteAll;
-
