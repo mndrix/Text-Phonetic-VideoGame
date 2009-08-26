@@ -10,7 +10,7 @@ our $VERSION = '0.01';
 sub _do_encode {
     my ( $self, $string ) = @_;
     $string =~ s/\s+/ /g;
-    my @words = split / /, $string;
+    my @words = map { $self->split_compound_word($_) } split / /, $string;
     my @encodings = map { String::Nysiis::nysiis($_) } @words;
     return join ' ', @encodings;
 }
