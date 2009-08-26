@@ -54,9 +54,11 @@ my %dictionary = map { $_ => 1 } qw(
     aeon
     age
     aid
+    all
     alpha
     ammo
     anal
+    andreas
     anti
     apex
     aqua
@@ -67,6 +69,7 @@ my %dictionary = map { $_ => 1 } qw(
     army
     ash
     assault
+    astro
     atom
     aunt
     aura
@@ -118,19 +121,24 @@ my %dictionary = map { $_ => 1 } qw(
     boat
     body
     bomb
+    bomber
     bond
     bone
     boot
     boss
     bot
+    bound
     bow
+    boy
     brat
+    break
     brew
     buck
     bud
     bull
     bump
     bunk
+    burger
     bush
     bust
     cage
@@ -145,10 +153,12 @@ my %dictionary = map { $_ => 1 } qw(
     chrome
     chum
     city
+    clay
     clod
     clown
     club
     coal
+    coaster
     coat
     cog
     coke
@@ -158,9 +168,11 @@ my %dictionary = map { $_ => 1 } qw(
     crew
     crib
     crop
+    cross
     crow
     cry
     cube
+    cup
     cyan
     dam
     dart
@@ -198,6 +210,7 @@ my %dictionary = map { $_ => 1 } qw(
     dust
     duty
     ear
+    earth
     east
     eat
     edit
@@ -221,7 +234,9 @@ my %dictionary = map { $_ => 1 } qw(
     fear
     feat
     fest
+    fighter
     film
+    fit
     flag
     flat
     foal
@@ -232,6 +247,7 @@ my %dictionary = map { $_ => 1 } qw(
     foot
     fort
     fox
+    francisco
     fuel
     fury
     fuse
@@ -283,8 +299,10 @@ my %dictionary = map { $_ => 1 } qw(
     hobo
     holy
     home
+    hot
     hounds
     hour
+    house
     howl
     hub
     hurt
@@ -307,6 +325,7 @@ my %dictionary = map { $_ => 1 } qw(
     jot
     jug
     junk
+    kart
     keel
     keep
     kill
@@ -326,6 +345,7 @@ my %dictionary = map { $_ => 1 } qw(
     leaf
     leg
     life
+    light
     lily
     limb
     lime
@@ -342,6 +362,8 @@ my %dictionary = map { $_ => 1 } qw(
     mad
     mail
     man
+    mario
+    master
     mate
     maze
     mech
@@ -353,6 +375,7 @@ my %dictionary = map { $_ => 1 } qw(
     mint
     moat
     monk
+    monkey
     moon
     moss
     mud
@@ -365,23 +388,28 @@ my %dictionary = map { $_ => 1 } qw(
     oar
     odd
     odor
+    off
     ogre
     old
     one
     owl
     pac
+    pack
     page
     palm
+    paper
     pawn
     peer
     ping
     pint
     pixy
+    play
     poem
     poet
     pole
     poll
     pong
+    power
     pray
     prey
     puck
@@ -391,9 +419,11 @@ my %dictionary = map { $_ => 1 } qw(
     pun
     pure
     quiz
+    race
     rag
     rage
     rain
+    ranger
     rant
     rap
     rare
@@ -405,6 +435,7 @@ my %dictionary = map { $_ => 1 } qw(
     road
     rock
     roll
+    roller
     roof
     rook
     room
@@ -419,6 +450,7 @@ my %dictionary = map { $_ => 1 } qw(
     sack
     sale
     salt
+    san
     sash
     scab
     seal
@@ -427,6 +459,7 @@ my %dictionary = map { $_ => 1 } qw(
     sect
     self
     sew
+    shift
     ship
     shore
     sick
@@ -440,6 +473,7 @@ my %dictionary = map { $_ => 1 } qw(
     slam
     slug
     slum
+    smash
     smog
     snow
     soap
@@ -450,12 +484,17 @@ my %dictionary = map { $_ => 1 } qw(
     sound
     soup
     sour
+    speed
+    spider
     spot
     spy
     star
+    station
     stem
     step
     stew
+    story
+    super
     swim
     tail
     talk
@@ -470,14 +509,18 @@ my %dictionary = map { $_ => 1 } qw(
     temp
     text
     thin
+    thru
     tick
     tide
+    tiger
+    time
     toad
     toe
     toll
     tomb
     tome
     tot
+    toy
     trap
     tree
     tube
@@ -493,7 +536,9 @@ my %dictionary = map { $_ => 1 } qw(
     vote
     vow
     wage
+    war
     ward
+    wario
     warp
     wart
     wasp
@@ -502,14 +547,19 @@ my %dictionary = map { $_ => 1 } qw(
     weal
     web
     wet
+    wheel
     whip
     wick
+    wii
     wine
     wing
     wise
     wolf
     womb
+    wood
+    world
     worm
+    yard
     yarn
     year
     york
