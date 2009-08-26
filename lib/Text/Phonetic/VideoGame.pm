@@ -4,6 +4,7 @@ use strict;
 use base 'Text::Phonetic';
 
 use String::Nysiis;
+use Roman ();
 
 our $VERSION = '0.01';
 
@@ -14,6 +15,12 @@ sub _do_encode {
     $string =~ s/\bn\b//g;    # isolated "n" like "Ghouls n Ghosts"
     $string =~ s/\s+/ /g;
     my @words = map { $self->split_compound_word($_) } split / /, $string;
+
+    # do some in-place substitutions
+    for my $word (@words) {
+        $word = Roman::arabic($word) if Roman::isroman($word);
+    }
+
     my @encodings = map { String::Nysiis::nysiis($_) } @words;
     return join ' ', @encodings;
 }

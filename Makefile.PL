@@ -9,6 +9,7 @@ build_requires 'Test::More';
 
 requires 'Text::Phonetic';
 requires 'String::Nysiis';
+requires 'Roman';
 
 auto_install;
 
