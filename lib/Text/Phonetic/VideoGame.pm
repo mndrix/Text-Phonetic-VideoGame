@@ -14,6 +14,7 @@ sub _do_encode {
 
     $string =~ s{[-/]}{ }g;     # dashes, slashes are like spaces
     $string =~ s/[&.'"]//g;     # most punctuation can be ignored
+    $string =~ s/(\D)(\d)/$1 $2/g;  # "xbox360", "kombat4", etc
     $string =~ s/\b(n|a|an|the|and|of|vs)\b//g;   # isolated noise words
     $string =~ s/\s+/ /g;
     $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
