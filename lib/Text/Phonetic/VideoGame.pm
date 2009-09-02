@@ -9,9 +9,11 @@ use Roman ();
 our $VERSION = '0.01';
 
 sub _do_encode {
-    my ( $self, $string ) = @_;
+    my $self   = shift;
+    my $string = lc shift;
+
     $string =~ s/-/ /g;       # dashes are more like spaces than punctuation
-    $string =~ s/[&.]//g;     # most punctuation can be ignored
+    $string =~ s/[&.'"]//g;     # most punctuation can be ignored
     $string =~ s/\bn\b//g;    # isolated "n" like "Ghouls n Ghosts"
     $string =~ s/\s+/ /g;
     my @words = map { $self->split_compound_word($_) } split / /, $string;

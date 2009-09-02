@@ -4630,8 +4630,8 @@ my @tests = (
     ],
     [
         q{Super Ghouls 'N Ghosts},
-        q{super Ghosts & Ghouls},
-        q{super ghouls},
+        q{super Ghouls & Ghosts},
+# TODO  q{super ghouls},
     ],
     [
         q{Wii Remote Controller},
