@@ -8,6 +8,17 @@ use Roman ();
 use Lingua::EN::Inflect::Number qw( to_S );
 
 our $VERSION = '0.01';
+my %ordinal = (
+    '1st' => 'first',
+    '2nd' => 'second',
+    '3rd' => 'third',
+    '4th' => 'fourth',
+    '5th' => 'fifth',
+    '6th' => 'sixth',
+    '7th' => 'seventh',
+    '8th' => 'eighth',
+    '9th' => 'ninth',
+);
 
 sub _do_encode {
     my $self   = shift;
@@ -15,6 +26,7 @@ sub _do_encode {
 
     $string =~ s{[-/]}{ }g;     # dashes, slashes are like spaces
     $string =~ s/[&.'"]//g;     # most punctuation can be ignored
+    $string =~ s/\b([1-9])(st|nd|rd|th)\b/$ordinal{"$1$2"}/ge;
     $string =~ s/(\D)(\d)/$1 $2/g;  # "xbox360", "kombat4", etc
     $string =~ s/\b(n|a|an|the|and|of|vs)\b//g;   # isolated noise words
     $string =~ s/\s+/ /g;
