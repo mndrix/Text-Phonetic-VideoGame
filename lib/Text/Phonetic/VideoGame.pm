@@ -12,10 +12,11 @@ sub _do_encode {
     my $self   = shift;
     my $string = lc shift;
 
-    $string =~ s/-/ /g;       # dashes are more like spaces than punctuation
+    $string =~ s{[-/]}{ }g;     # dashes, slashes are like spaces
     $string =~ s/[&.'"]//g;     # most punctuation can be ignored
-    $string =~ s/\b(n|a|an|the|and)\b//g;    # isolated noise words
+    $string =~ s/\b(n|a|an|the|and|of|vs)\b//g;   # isolated noise words
     $string =~ s/\s+/ /g;
+    $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
     my @words = map { $self->split_compound_word($_) } split / /, $string;
 
     # do some in-place substitutions
@@ -23,7 +24,11 @@ sub _do_encode {
         $word = Roman::arabic($word) if Roman::isroman($word);
     }
 
-    my @encodings = map { String::Nysiis::nysiis($_) } @words;
+    # normalize numbers that might be years
+    $string =~ s/\b(7|8|9)([0-9])\b/19$1$2/g;  # 97 -> 1997
+    $string =~ s/\b(0|1|2)([0-9])\b/20$1$2/g;  # 03 -> 2003
+
+    my @encodings = map { /^\d+$/ ? $_ : String::Nysiis::nysiis($_) } @words;
     return join ' ', @encodings;
 }
 
@@ -102,6 +107,7 @@ my %dictionary = map { $_ => 1 } qw(
     bass
     bath
     bats
+    battle
     bead
     beam
     bean
@@ -121,17 +127,20 @@ my %dictionary = map { $_ => 1 } qw(
     blue
     boar
     boat
+    bob
     body
     bomb
     bomber
     bond
     bone
+    book
     boot
     boss
     bot
     bound
     bow
     boy
+    brain
     brat
     break
     brew
@@ -145,6 +154,8 @@ my %dictionary = map { $_ => 1 } qw(
     bust
     cage
     cake
+    caliber
+    calibur
     call
     camp
     cane
@@ -167,6 +178,7 @@ my %dictionary = map { $_ => 1 } qw(
     comb
     cook
     corn
+    craft
     crew
     crib
     crop
@@ -195,6 +207,7 @@ my %dictionary = map { $_ => 1 } qw(
     dock
     dog
     dogs
+    doo
     dope
     dorm
     double
@@ -224,6 +237,7 @@ my %dictionary = map { $_ => 1 } qw(
     epic
     ever
     exit
+    extra
     eye
     face
     fad
@@ -236,6 +250,7 @@ my %dictionary = map { $_ => 1 } qw(
     fear
     feat
     fest
+    field
     fighter
     film
     fit
@@ -250,9 +265,11 @@ my %dictionary = map { $_ => 1 } qw(
     fort
     fox
     francisco
+    front
     fuel
     fury
     fuse
+    game
     garb
     gash
     gate
@@ -268,6 +285,8 @@ my %dictionary = map { $_ => 1 } qw(
     goal
     goat
     god
+    gold
+    golden
     golf
     good
     goof
@@ -339,6 +358,7 @@ my %dictionary = map { $_ => 1 } qw(
     lake
     lamb
     lamp
+    land
     lane
     lank
     lap
@@ -373,6 +393,7 @@ my %dictionary = map { $_ => 1 } qw(
     melt
     mesh
     mess
+    metroid
     milk
     mint
     moat
@@ -380,6 +401,7 @@ my %dictionary = map { $_ => 1 } qw(
     monkey
     moon
     moss
+    mote
     mud
     myth
     name
@@ -399,6 +421,7 @@ my %dictionary = map { $_ => 1 } qw(
     pack
     page
     palm
+    pant
     paper
     pawn
     peer
@@ -414,6 +437,7 @@ my %dictionary = map { $_ => 1 } qw(
     power
     pray
     prey
+    prime
     puck
     puff
     pug
@@ -455,6 +479,7 @@ my %dictionary = map { $_ => 1 } qw(
     san
     sash
     scab
+    scooby
     seal
     seam
     seat
@@ -488,19 +513,25 @@ my %dictionary = map { $_ => 1 } qw(
     sour
     speed
     spider
+    splitter
+    sponge
     spot
     spy
+    square
     star
     station
     stem
     step
     stew
+    stool
     story
     super
     swim
+    switch
     tail
     talk
     tall
+    tank
     task
     tax
     team
@@ -540,6 +571,7 @@ my %dictionary = map { $_ => 1 } qw(
     wage
     war
     ward
+    ware
     wario
     warp
     wart
