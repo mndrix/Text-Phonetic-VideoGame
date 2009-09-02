@@ -23,6 +23,7 @@ sub _do_encode {
 
     # do some in-place substitutions
     for my $word (@words) {
+        $word = $self->word2num($word);
         $word = Roman::arabic($word) if Roman::isroman($word);
     }
 
@@ -32,6 +33,25 @@ sub _do_encode {
 
     my @encodings = map { /^\d+$/ ? $_ : String::Nysiis::nysiis($_) } @words;
     return join ' ', @encodings;
+}
+
+# returns an arabic numeral representation of number word
+# ("five" -> 5). If the word is not a number word, returns the word.
+sub word2num {
+    my ($self, $word) = @_;
+    my %words = (
+        one   => 1,
+        two   => 2,
+        three => 3,
+        four  => 4,
+        five  => 5,
+        six   => 6,
+        seven => 7,
+        eight => 8,
+        nine  => 9,
+    );
+    return $words{$word} if exists $words{$word};
+    return $word;
 }
 
 sub split_compound_word {
