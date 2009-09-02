@@ -35,6 +35,7 @@ sub _do_encode {
     $string =~ s/\b([1-9])(st|nd|rd|th)\b/$ordinal{"$1$2"}/ge;
     $string =~ s/(\D)(\d)/$1 $2/g;  # "xbox360", "kombat4", etc
     $string =~ s/\b(n|a|an|the|and|of|vs)\b//g;   # isolated noise words
+    $string =~ s/\b(edition|volume|vol)\b//g;   # more noise words
 
     # expand some common abbreviations
     $string =~ s/\b(tmnt|ddr|ny)\b/$abbreviation{$1}/ge;
