@@ -7,6 +7,7 @@ license  'mit';
 
 build_requires 'Test::More';
 
+requires 'Lingua::EN::Inflect::Number';
 requires 'Text::Phonetic';
 requires 'String::Nysiis';
 requires 'Roman';

@@ -5,6 +5,7 @@ use base 'Text::Phonetic';
 
 use String::Nysiis;
 use Roman ();
+use Lingua::EN::Inflect::Number qw( to_S );
 
 our $VERSION = '0.01';
 
@@ -47,6 +48,9 @@ sub split_compound_word {
         return ( $front, $back )
           if $self->is_word($front)
           and $self->is_word($back);
+        return ( $front, $back )
+          if $self->is_word( to_S $front )
+          and $self->is_word( to_S $back );
     }
 
     return $word;
