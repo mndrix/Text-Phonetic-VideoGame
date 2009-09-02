@@ -3,6 +3,7 @@ use warnings;
 use Text::Phonetic::VideoGame;
 use Test::More;
 use List::MoreUtils qw( uniq );
+use Data::Dumper;
 
 my @tests = (
     [
@@ -4759,6 +4760,6 @@ for my $test (@tests) {
     # if the hashes don't match, produce more helpful output
     my ( %got, %expected );
     @got{ @$test } = @encodings;
-    @expected{ @$test } = ($encodings[0]) x @encodings;
-    is_deeply( \%got, \%expected, $msg );
+    diag( Dumper(\%got) );
+    ok( 0, $msg );
 }
