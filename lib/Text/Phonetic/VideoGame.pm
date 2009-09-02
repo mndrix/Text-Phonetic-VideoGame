@@ -20,10 +20,16 @@ my %ordinal = (
     '9th' => 'ninth',
 );
 my %abbreviation = (
-    tmnt => 'teenage mutant ninja turtles',
-    ddr  => 'dance dance revolution',
-    ny   => 'new york',
+    bros      => 'brothers',
     bustamove => 'bust a move',    # easier than using split_compound_word
+    ddr  => 'dance dance revolution',
+    doa  => 'dead or alive',
+    ff   => 'final fantasy',
+    gta  => 'grand theft auto',
+    le   => 'limited edition',
+    nam  => 'vietnam',
+    ny   => 'new york',
+    tmnt => 'teenage mutant ninja turtles',
 );
 
 sub _do_encode {
@@ -38,7 +44,8 @@ sub _do_encode {
     $string =~ s/\b(edition|volume|vol)\b//g;   # more noise words
 
     # expand some common abbreviations
-    $string =~ s/\b(tmnt|ddr|ny)\b/$abbreviation{$1}/ge;
+    my $abbr = join '|', keys(%abbreviation);
+    $string =~ s/\b($abbr)\b/$abbreviation{$1}/ge;
 
     $string =~ s/\s+/ /g;
     $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
