@@ -19,6 +19,12 @@ my %ordinal = (
     '8th' => 'eighth',
     '9th' => 'ninth',
 );
+my %abbreviation = (
+    tmnt => 'teenage mutant ninja turtles',
+    ddr  => 'dance dance revolution',
+    ny   => 'new york',
+    bustamove => 'bust a move',    # easier than using split_compound_word
+);
 
 sub _do_encode {
     my $self   = shift;
@@ -29,6 +35,10 @@ sub _do_encode {
     $string =~ s/\b([1-9])(st|nd|rd|th)\b/$ordinal{"$1$2"}/ge;
     $string =~ s/(\D)(\d)/$1 $2/g;  # "xbox360", "kombat4", etc
     $string =~ s/\b(n|a|an|the|and|of|vs)\b//g;   # isolated noise words
+
+    # expand some common abbreviations
+    $string =~ s/\b(tmnt|ddr|ny)\b/$abbreviation{$1}/ge;
+
     $string =~ s/\s+/ /g;
     $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
     my @words = map { $self->split_compound_word($_) } split / /, $string;
