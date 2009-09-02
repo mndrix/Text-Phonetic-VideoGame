@@ -47,6 +47,17 @@ sub _do_encode {
     my $abbr = join '|', keys(%abbreviation);
     $string =~ s/\b($abbr)\b/$abbreviation{$1}/ge;
 
+    # remove redundant words
+    for ($string) {
+        s/nfl//        if /\bmadden\b/;
+        s/golf//       if /\btiger woods\b/;
+        s/nintendo//   if /\bds\b/;
+        s/soccer//     if /\bfifa\b/;
+        s/football//   if /\bblitz\b/;
+        s/basketball// if /\bnba\b/;
+        s/hedgehog//   if /\bsonic\b/;
+    }
+
     $string =~ s/\s+/ /g;
     $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
     my @words = map { $self->split_compound_word($_) } split / /, $string;
