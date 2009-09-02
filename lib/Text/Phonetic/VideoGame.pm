@@ -14,7 +14,7 @@ sub _do_encode {
 
     $string =~ s/-/ /g;       # dashes are more like spaces than punctuation
     $string =~ s/[&.'"]//g;     # most punctuation can be ignored
-    $string =~ s/\bn\b//g;    # isolated "n" like "Ghouls n Ghosts"
+    $string =~ s/\b(n|a|an|the|and)\b//g;    # isolated noise words
     $string =~ s/\s+/ /g;
     my @words = map { $self->split_compound_word($_) } split / /, $string;
 
