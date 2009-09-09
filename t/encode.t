@@ -2368,7 +2368,6 @@ my @tests = (
         q{fire emblem: sacred stones},
     ],
     [
-        q{MLS ExtraTime 2002},
         q{extra time 2002},
         q{extratime 2002},
     ],
@@ -2382,7 +2381,6 @@ my @tests = (
     ],
     [
         q{Bomberman 64},
-        q{bomber man},
         q{bomber man 64},
     ],
     [
@@ -2390,13 +2388,8 @@ my @tests = (
         q{star fox},
     ],
     [
-        q{FIFA World Cup 2002},
-        q{world cup 2002},
-    ],
-    [
         q{Lord of the Rings Fellowship},
         q{Lord of the Rings: The Fellowship},
-        q{fellowship},
         q{lord of the rings - fellowship},
         q{lord of the rings the fellowship},
         q{lord of the rings: fellowship},
@@ -2548,10 +2541,6 @@ my @tests = (
     [
         q{Dead or Alive 3},
         q{doa 3},
-    ],
-    [
-        q{Dave Mirra Freestyle BMX 2},
-        q{dave mirra 2},
     ],
     [
         q{Medal of Honor  - Vanguard},
