@@ -35,8 +35,9 @@ my %abbreviation = (
 sub _do_encode {
     my $self   = shift;
     my $string = lc shift;
+    my $original = $string;
 
-    $string =~ s{[-/]}{ }g;     # dashes, slashes are like spaces
+    $string =~ s{[-/:]}{ }g;     # dashes, slashes are like spaces
     $string =~ s/[&.'"]//g;     # most punctuation can be ignored
     $string =~ s/\b([1-9])(st|nd|rd|th)\b/$ordinal{"$1$2"}/ge;
     $string =~ s/\b2k([0-9])\b/200$1/ig;   # 2K4 -> 2004
@@ -47,17 +48,6 @@ sub _do_encode {
     # expand some common abbreviations
     my $abbr = join '|', keys(%abbreviation);
     $string =~ s/\b($abbr)\b/$abbreviation{$1}/ge;
-
-    # remove redundant words
-    for ($string) {
-        s/nfl//        if /\bmadden\b/;
-        s/golf//       if /\btiger woods\b/;
-        s/nintendo//   if /\bds\b/;
-        s/soccer//     if /\bfifa\b/;
-        s/football//   if /\bblitz\b/;
-        s/basketball// if /\bnba\b/;
-        s/hedgehog//   if /\bsonic\b/;
-    }
 
     $string =~ s/\s+/ /g;
     $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
@@ -75,7 +65,29 @@ sub _do_encode {
 
     my @encodings = map { /^\d+$/ ? $_ : String::Nysiis::nysiis($_) } @words;
     $string = join ' ', @encodings;
+
+    # remove redundant words
     $string =~ s/\b(\d+)\s\1\b/$1/g;    # 2 2 -> 2
+    for ($string) {
+        s/\bNANTAND\b//   if $original =~ /\bds\b/;      # Nintendo   <- DS
+        s/\bNANTAND\b//   if $original =~ /\bwii\b/;     # Nintendo   <- Wii
+        s/\bSACAR\b//     if $original =~ /\bfifa\b/;    # soccer     <- FIFA
+        s/\bBASCATBAL\b// if $original =~ /\bnba\b/;     # basketball <- NBA
+        s/\bFATBAL\b//    if $original =~ /\bnfl\b/;     # football   <- NFL
+        s/\bHACY\b//      if $original =~ /\bnhl\b/;     # hockey     <- NHL
+    }
+    for ($string) {
+        s/\bNFL\b//    if /\bMADAN\b/;        # NFL      <- Madden
+        s/\bGALf\b//   if /\bTAGAR WAD\b/;    # golf     <- Tiger Woods
+        s/\bFATBAL\b// if /\bBLITZ\b/;        # football <- blitz
+        s/\bHAGAG\b//  if /\bSANAC\b/;        # hedgehog <- Sonic
+        s/\bCABAL\b//  if /\bDANGAR HAN\b/;   # Cabela's <- Dangerous Hunts
+        s/\bBNX\b//    if /\bDAV MAR\b/;      # BMX      <- Dave Mirra
+        s/\bW\b//      if /\bRASTL MAN\b/;    # WWE      <- Wrestlemania
+    }
+
+    $string =~ s/\s+/ /g;
+    $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
     return $string;
 }
 
@@ -193,6 +205,7 @@ my %dictionary = map { $_ => 1 } qw(
     bite
     blade
     blob
+    blood
     blue
     boar
     boat
@@ -453,6 +466,7 @@ my %dictionary = map { $_ => 1 } qw(
     mad
     mail
     man
+    mania
     mario
     master
     mate
@@ -522,6 +536,7 @@ my %dictionary = map { $_ => 1 } qw(
     rant
     rap
     rare
+    rayne
     realm
     rich
     ride
@@ -662,6 +677,7 @@ my %dictionary = map { $_ => 1 } qw(
     wood
     world
     worm
+    wrestle
     yard
     yarn
     year
