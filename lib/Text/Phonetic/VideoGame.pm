@@ -31,6 +31,9 @@ my %abbreviation = (
     ny   => 'new york',
     tmnt => 'teenage mutant ninja turtles',
 
+    # easier than using a words to numbers module
+    eighteen => 18,
+
     # easier than using split_compound_word
     bustamove => 'bust a move',
     davinci   => 'da vinci',
@@ -95,6 +98,7 @@ sub _do_encode {
         s/\bCABAL\b//  if /\bDANGAR HAN\b/;   # Cabela's <- Dangerous Hunts
         s/\bBNX\b//    if /\bDAV MAR\b/;      # BMX      <- Dave Mirra
         s/\bW\b//      if /\bRASTL MAN\b/;    # WWE      <- Wrestlemania
+        s/\bSPANG BAB\b// if /\bSGAR PAN\b/;  # Sponge Bob <- Square Pants
     }
 
     $string =~ s/X\b/C/g;      # "TANX" -> "TANC" etc

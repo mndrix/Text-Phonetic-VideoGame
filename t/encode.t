@@ -215,17 +215,6 @@ my @tests = (
         q{kingdom hearts: chain of memories},
     ],
     [
-        q{Tiger Woods 2006},
-        q{tiger woods 06},
-        q{tiger woods pga 2006},
-        q{tiger woods pga tour 06},
-        q{tiger woods pga tour 2006},
-    ],
-    [
-        q{Red Card Soccer 2003},
-        q{red card 2003},
-    ],
-    [
         q{Mortal Combat 2},
         q{Mortal Combat II},
         q{Mortal Kombat 2},
@@ -2059,7 +2048,6 @@ my @tests = (
     [
         q{Sonic Adventure 2 Battle},
         q{Sonic Adventure Battle 2},
-        q{sonic 2 battle},
     ],
     [
         q{The Sims Bustin Out},
