@@ -69,19 +69,12 @@ my @tests = (
         q{mariokart ds},
     ],
     [
-        q{Spiderman Battle for New York},
         q{spider-man battle},
         q{spiderman battle},
     ],
     [
         q{Wii Fit},
         q{wiifit},
-    ],
-    [
-        q{'new' super mario},
-        q{New Super Mario Bros},
-        q{New Super Mario Brothers},
-        q{new super mario},
     ],
     [
         q{Wario World},
@@ -196,12 +189,6 @@ my @tests = (
         q{comic zone},
     ],
     [
-        q{Tiger Woods 2003},
-        q{pga 2003},
-        q{tiger woods pga 2003},
-        q{tigerwoods 2003},
-    ],
-    [
         q{Aladdin},
         q{aladin},
         q{alladin},
@@ -223,7 +210,6 @@ my @tests = (
     [
         q{Zelda Collector Edition},
         q{Zelda Collectors Edition},
-        q{zelda collection},
         q{zelda collector's edition},
     ],
     [
@@ -233,7 +219,6 @@ my @tests = (
     [
         q{Yoshi's Story},
         q{yoshi story},
-        q{yoshies story},
         q{yoshis story},
     ],
     [
@@ -356,7 +341,7 @@ my @tests = (
         q{gothom racing},
     ],
     [
-        q{ligh speed rescue},
+        q{light speed rescue},
         q{lightspeed rescue},
     ],
     [
@@ -399,9 +384,7 @@ my @tests = (
     ],
     [
         q{Ratchet Deadlock},
-        q{Ratchet Deadlocked},
         q{Ratchet: Deadlock},
-        q{ratchet: deadlocked},
     ],
     [
         q{Disney Sport Snowboarding },
@@ -434,10 +417,6 @@ my @tests = (
         q{madden nfl 2007},
     ],
     [
-        q{ATV Offroad Fury},
-        q{atv off road},
-    ],
-    [
         q{Half-Life},
         q{half life},
     ],
@@ -448,7 +427,6 @@ my @tests = (
     [
         q{Mario Kart Wii},
         q{mariokart wii},
-        q{mariokartwii},
     ],
     [
         q{Fantastic 4},
@@ -490,13 +468,6 @@ my @tests = (
         q{SuperSmash Bros Brawl},
     ],
     [
-        q{Tiger Woods 2007},
-        q{tiger woods 07},
-        q{tiger woods pga 2007},
-        q{tiger woods pga tour 07},
-        q{tiger woods pga tour 2007},
-    ],
-    [
         q{Harvest Moon - Save the Homeland},
         q{Harvest Moon Save the Homeland},
         q{Harvest Moon: Save the Homeland},
@@ -528,10 +499,6 @@ my @tests = (
     [
         q{Earthbound},
         q{earth bound},
-    ],
-    [
-        q{Diddy Kong Racing},
-        q{diddy kong},
     ],
     [
         q{World Cup 98},
@@ -716,16 +683,11 @@ my @tests = (
         q{final fantasy 12 collector},
     ],
     [
-        q{Hot Wheels Beat That},
-        q{Hotwheels bear that},
-    ],
-    [
         q{hang time},
         q{hangtime},
     ],
     [
         q{Teenage Mutant Ninja Turtles 2 Back from the Sewers},
-        q{Teenage Mutant Ninja Turtles Back from the Sewers},
         q{Teenage Mutant Ninja Turtles II Back from the Sewers},
     ],
     [
@@ -802,9 +764,7 @@ my @tests = (
     ],
     [
         q{Dead or Alive Beach Volleyball},
-        q{dead or alive extreme},
         q{doa beach volleyball},
-        q{doa volleyball},
     ],
     [
         q{azurick},
@@ -826,10 +786,6 @@ my @tests = (
     [
         q{double dragon 5},
         q{double dragon v},
-    ],
-    [
-        q{Foresaken 64},
-        q{forsaken 64},
     ],
     [
         q{shell shock nam},
@@ -918,7 +874,6 @@ my @tests = (
         q{Need for Speed Underground 2},
         q{Need for Speed Underground ii},
         q{need for speed: underground 2},
-        q{speed underground 2},
     ],
     [
         q{Splinter Cell Double Agent},
@@ -956,7 +911,6 @@ my @tests = (
         q{kingdom hearts ii},
     ],
     [
-        q{Fzero GP Legend},
         q{f zero gp},
         q{f-zero gp},
         q{fzero gp},
@@ -979,7 +933,6 @@ my @tests = (
     ],
     [
         q{American Sk8land},
-        q{Tony Hawk American Skateland},
         q{american skateland},
     ],
     [
@@ -989,7 +942,6 @@ my @tests = (
     ],
     [
         q{Super Mario Bros 2},
-        q{super mario 2},
         q{super mario bros. 2},
         q{super mario brothers 2},
     ],
@@ -1031,9 +983,10 @@ my @tests = (
     ],
     [
         q{Tiger Woods 2005},
-        q{Tiger Woods PGA Tour 2005},
         q{tiger woods 05},
-        q{tiger woods pga 2005},
+    ],
+    [
+        q{Tiger Woods PGA Tour 2005},
         q{tiger woods pga tour 05},
     ],
     [
@@ -1042,9 +995,7 @@ my @tests = (
         q{final fantasy X},
     ],
     [
-        q{Genghis Khan II Clan of the Gray Wolf},
         q{Genghis Khan ii},
-        q{clan of gray wolf},
         q{genghis khan 2},
     ],
     [
@@ -1068,10 +1019,6 @@ my @tests = (
     [
         q{Super Smash TV},
         q{super smash T.V.},
-    ],
-    [
-        q{Rugrats Go Wild},
-        q{rugrats gone wild},
     ],
     [
         q{thunder strike},
@@ -1099,7 +1046,6 @@ my @tests = (
     [
         q{Teenage Mutant Ninja Turtles 3 radical rescue},
         q{Teenage Mutant Ninja Turtles III Radical Rescue},
-        q{Teenage Mutant Ninja Turtles radical rescue},
     ],
     [
         q{Dead or Alive 2},
@@ -1168,7 +1114,6 @@ my @tests = (
         q{Sponge Bob Square Pants Yellow Avenger},
         q{Sponge Bob SquarePants yellow avenger},
         q{SpongeBob Square Pants yellow avenger},
-        q{SpongeBob SquarePants yellow},
         q{SpongeBob SquarePants yellow avenger},
     ],
     [
@@ -1195,10 +1140,6 @@ my @tests = (
     [
         q{Harry Potter - Quidditch},
         q{Harry Potter: Quidditch},
-    ],
-    [
-        q{Quiddich World Cup},
-        q{Quidditch World Cup},
     ],
     [
         q{NBA Live 2006},
@@ -1338,16 +1279,6 @@ my @tests = (
         q{spartan: total warrior},
     ],
     [
-        q{wind waker},
-        q{wind walker},
-        q{windwaker},
-        q{windwalker},
-    ],
-    [
-        q{Norse by Norsewest},
-        q{Norse by Northwest},
-    ],
-    [
         q{Mega Man Zero 2},
         q{megaman zero 2},
     ],
@@ -1467,7 +1398,6 @@ my @tests = (
         q{Typing of the Dead},
     ],
     [
-        q{R-Type III The Third Lightning},
         q{r-type 3},
         q{r-type iii},
         q{rtype 3},
@@ -1655,7 +1585,6 @@ my @tests = (
         q{motogp 2},
     ],
     [
-        q{Tony Hawk 3},
         q{tony hawk pro skater 3},
         q{tony hawk's pro skater 3},
         q{tony hawks pro skater 3},
@@ -1792,10 +1721,6 @@ my @tests = (
         q{pokeman stadium 2},
     ],
     [
-        q{Super Smash Bros.},
-        q{smash brothers},
-    ],
-    [
         q{Twisted Metal 2},
         q{Twisted Metal II},
     ],
@@ -1868,7 +1793,6 @@ my @tests = (
         q{final fantasy ix},
     ],
     [
-        q{SimEarth the Living Planet},
         q{sim earth},
         q{simearth},
     ],
@@ -1922,7 +1846,6 @@ my @tests = (
         q{iss 98},
     ],
     [
-        q{Advance Wars DS},
         q{advance wars dual strike},
         q{advance wars: dual strike},
     ],
@@ -2227,10 +2150,8 @@ my @tests = (
         q{SpongeBob SquarePants creature},
     ],
     [
-        q{Tiger Woods PGA Tour 08},
         q{tiger woods 08},
         q{tiger woods 2008},
-        q{tiger woods pga 2008},
     ],
     [
         q{NASCAR Thunder 03},

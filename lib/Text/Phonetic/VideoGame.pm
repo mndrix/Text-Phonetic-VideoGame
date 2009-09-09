@@ -20,6 +20,7 @@ my %ordinal = (
     '9th' => 'ninth',
 );
 my %abbreviation = (
+    breathe => 'breath',   # NYSIIS handles this case poorly
     bros => 'brothers',
     ddr  => 'dance dance revolution',
     doa  => 'dead or alive',
@@ -27,9 +28,15 @@ my %abbreviation = (
     gta  => 'grand theft auto',
     iss  => 'international superstar soccer',
     le   => 'limited edition',
+    motocross => 'motorcross',
     nam  => 'vietnam',
     ny   => 'new york',
+    pgr  => 'project gotham racing',
+    sk8  => 'skate',
+    t2   => 'terminator 2',
     tmnt => 'teenage mutant ninja turtles',
+    wwf  => 'wwe',
+    xtreme => 'extreme',
 
     # easier than using a words to numbers module
     eighteen => 18,
@@ -52,6 +59,7 @@ sub _do_encode {
     $string =~ s{[-/:]}{ }g;     # dashes, slashes are like spaces
     $string =~ s/[&.'"]//g;     # most punctuation can be ignored
     $string =~ s/\b([1-9])(st|nd|rd|th)\b/$ordinal{"$1$2"}/ge;
+    $string =~ s/\bv(\d)\b/volume $1/g;
     $string =~ s/\b2k([0-9])\b/200$1/ig;   # 2K4 -> 2004
     $string =~ s/(\D)(\d)/$1 $2/g;  # "xbox360", "kombat4", etc
 
@@ -60,8 +68,8 @@ sub _do_encode {
     $string =~ s/\b($abbr)\b/$abbreviation{$1}/ge;
 
     # remove some noise words
-    $string =~ s/\b(n|a|an|the|and|of|vs|at|in)\b//g;
-    $string =~ s/\b(edition|volume|vol|game)\b//g;
+    $string =~ s/\b(n|a|an|the|and|of|vs|at|in|for|if)\b//g;
+    $string =~ s/\b(edition|volume|vol|game|games)\b//g;
 
     $string =~ s/\s+/ /g;
     $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
@@ -92,16 +100,19 @@ sub _do_encode {
     }
     for ($string) {
         s/\bNFL\b//    if /\bMAD DAN\b/;      # NFL      <- Madden
-        s/\bGALf\b//   if /\bTAGAR WAD\b/;    # golf     <- Tiger Woods
-        s/\bFAT BAL\b// if /\bBLITZ\b/;       # football <- blitz
+        s/\bGALF\b//   if /\bTAGAR WAD\b/;    # golf     <- Tiger Woods
+        s/\bFAT BAL\b// if /\bBLAT\b/;        # football <- blitz
         s/\bHAGAG\b//  if /\bSANAC\b/;        # hedgehog <- Sonic
         s/\bCABAL\b//  if /\bDANGAR HAN\b/;   # Cabela's <- Dangerous Hunts
         s/\bBNX\b//    if /\bDAV MAR\b/;      # BMX      <- Dave Mirra
         s/\bW\b//      if /\bRASTL MAN\b/;    # WWE      <- Wrestlemania
+        s/\bS\b//      if /\bRAN STANPY\b/;   # Show     <- Ren & Stimpy
         s/\bSPANG BAB\b// if /\bSGAR PAN\b/;  # Sponge Bob <- Square Pants
+        s/\bRASC RANGAR\b// if /\bCAP DAL\b/; # Rescue Rangers <- Chip & Dale
     }
 
     $string =~ s/X\b/C/g;      # "TANX" -> "TANC" etc
+    $string =~ s/\bCRASN\b/CRASAN/g;
     $string =~ s/\s+/ /g;
     $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
     return $string;
@@ -112,6 +123,7 @@ sub _do_encode {
 sub word2num {
     my ($self, $word) = @_;
     my %words = (
+        zero  => 0,
         one   => 1,
         two   => 2,
         three => 3,
@@ -156,8 +168,11 @@ my %dictionary = map { $_ => 1 } qw(
     acre
     act
     aeon
+    aero
+    after
     age
     aid
+    air
     all
     alpha
     ammo
@@ -216,11 +231,13 @@ my %dictionary = map { $_ => 1 } qw(
     bell
     belt
     best
-    bike
     big
+    bike
     bird
     bite
     blade
+    blast
+    blind
     blob
     blood
     blue
@@ -233,6 +250,7 @@ my %dictionary = map { $_ => 1 } qw(
     bond
     bone
     book
+    boom
     boot
     boss
     bot
@@ -249,6 +267,7 @@ my %dictionary = map { $_ => 1 } qw(
     bump
     bunk
     burger
+    burner
     bush
     bust
     butt
@@ -279,6 +298,8 @@ my %dictionary = map { $_ => 1 } qw(
     comb
     cook
     corn
+    corp
+    corps
     craft
     crew
     crib
@@ -305,6 +326,7 @@ my %dictionary = map { $_ => 1 } qw(
     dent
     diet
     dime
+    dino
     dock
     dog
     dogs
@@ -356,6 +378,7 @@ my %dictionary = map { $_ => 1 } qw(
     field
     fighter
     film
+    fire
     fit
     flag
     flat
@@ -397,19 +420,24 @@ my %dictionary = map { $_ => 1 } qw(
     gram
     grave
     gray
+    green
     grey
     grid
     grog
+    ground
     grub
     gun
     guy
     gym
     hair
     halo
+    hand
+    hang
     harm
     hat
     hawk
     head
+    heart
     heat
     heel
     helm
@@ -453,6 +481,8 @@ my %dictionary = map { $_ => 1 } qw(
     keel
     keep
     kill
+    king
+    kingdom
     kit
     kite
     knob
@@ -479,6 +509,7 @@ my %dictionary = map { $_ => 1 } qw(
     loaf
     loan
     lock
+    locked
     long
     loot
     loud
@@ -501,17 +532,21 @@ my %dictionary = map { $_ => 1 } qw(
     metroid
     milk
     mint
+    mix
     moat
     monk
     monkey
     moon
     moss
     mote
+    motor
     mud
     myth
     name
     navy
+    night
     nine
+    north
     nuke
     oak
     oar
@@ -529,6 +564,7 @@ my %dictionary = map { $_ => 1 } qw(
     palm
     pant
     paper
+    park
     pawn
     peer
     pilot
@@ -545,6 +581,7 @@ my %dictionary = map { $_ => 1 } qw(
     pray
     prey
     prime
+    pro
     puck
     puff
     pug
@@ -563,6 +600,7 @@ my %dictionary = map { $_ => 1 } qw(
     rare
     rayne
     realm
+    red
     rich
     ride
     rig
@@ -586,6 +624,7 @@ my %dictionary = map { $_ => 1 } qw(
     sale
     salt
     san
+    sanity
     sash
     scab
     scooby
@@ -595,11 +634,15 @@ my %dictionary = map { $_ => 1 } qw(
     sect
     self
     sew
+    shadow
+    shell
     shift
     ship
+    shock
     shore
     sick
     side
+    sign
     silk
     silo
     sim
@@ -610,6 +653,7 @@ my %dictionary = map { $_ => 1 } qw(
     slam
     slug
     slum
+    smart
     smash
     smog
     snow
@@ -621,6 +665,7 @@ my %dictionary = map { $_ => 1 } qw(
     sound
     soup
     sour
+    south
     speed
     spider
     splitter
@@ -630,11 +675,15 @@ my %dictionary = map { $_ => 1 } qw(
     square
     star
     station
+    steel
     stem
     step
     stew
     stool
     story
+    street
+    strike
+    stunt
     super
     swim
     switch
@@ -654,6 +703,7 @@ my %dictionary = map { $_ => 1 } qw(
     text
     thin
     thru
+    thunder
     tick
     tide
     tiger
@@ -667,9 +717,12 @@ my %dictionary = map { $_ => 1 } qw(
     toy
     trap
     tree
+    tropic
     tube
     tusk
     twin
+    ultra
+    under
     user
     vain
     veil
@@ -679,8 +732,9 @@ my %dictionary = map { $_ => 1 } qw(
     visa
     vote
     vow
-    walker
     wage
+    waker
+    walker
     war
     ward
     ware
@@ -692,6 +746,7 @@ my %dictionary = map { $_ => 1 } qw(
     weak
     weal
     web
+    west
     wet
     wheel
     whip
