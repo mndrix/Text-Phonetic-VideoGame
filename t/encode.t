@@ -2634,7 +2634,6 @@ my @tests = (
         q{Bart vs. the World },
     ],
     [
-        q{Road Runner's Death Valley Rally},
         q{road runner death valley},
         q{road runner's death valley},
     ],

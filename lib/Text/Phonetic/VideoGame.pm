@@ -74,7 +74,9 @@ sub _do_encode {
     }
 
     my @encodings = map { /^\d+$/ ? $_ : String::Nysiis::nysiis($_) } @words;
-    return join ' ', @encodings;
+    $string = join ' ', @encodings;
+    $string =~ s/\b(\d+)\s\1\b/$1/g;    # 2 2 -> 2
+    return $string;
 }
 
 # returns an arabic numeral representation of number word
