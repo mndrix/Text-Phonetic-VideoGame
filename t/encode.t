@@ -1276,9 +1276,8 @@ my @tests = (
         q{nascar 00},
     ],
     [
-        q{ESPN 2K5 Football},
+        q{ESPN Football 2K5},
         q{ESPN Football 2005},
-        q{nfl 2k5},
     ],
     [
         q{Warioware Twisted},
