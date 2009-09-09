@@ -20,16 +20,25 @@ my %ordinal = (
     '9th' => 'ninth',
 );
 my %abbreviation = (
-    bros      => 'brothers',
-    bustamove => 'bust a move',    # easier than using split_compound_word
+    bros => 'brothers',
     ddr  => 'dance dance revolution',
     doa  => 'dead or alive',
     ff   => 'final fantasy',
     gta  => 'grand theft auto',
+    iss  => 'international superstar soccer',
     le   => 'limited edition',
     nam  => 'vietnam',
     ny   => 'new york',
     tmnt => 'teenage mutant ninja turtles',
+
+    # easier than using split_compound_word
+    bustamove => 'bust a move',
+    davinci   => 'da vinci',
+    fzero     => 'f zero',
+    motogp    => 'moto gp',
+    proam     => 'pro am',
+    rtype     => 'r type',
+    xmen      => 'x men',
 );
 
 sub _do_encode {
@@ -42,12 +51,14 @@ sub _do_encode {
     $string =~ s/\b([1-9])(st|nd|rd|th)\b/$ordinal{"$1$2"}/ge;
     $string =~ s/\b2k([0-9])\b/200$1/ig;   # 2K4 -> 2004
     $string =~ s/(\D)(\d)/$1 $2/g;  # "xbox360", "kombat4", etc
-    $string =~ s/\b(n|a|an|the|and|of|vs)\b//g;   # isolated noise words
-    $string =~ s/\b(edition|volume|vol)\b//g;   # more noise words
 
     # expand some common abbreviations
     my $abbr = join '|', keys(%abbreviation);
     $string =~ s/\b($abbr)\b/$abbreviation{$1}/ge;
+
+    # remove some noise words
+    $string =~ s/\b(n|a|an|the|and|of|vs|at|in)\b//g;
+    $string =~ s/\b(edition|volume|vol|game)\b//g;
 
     $string =~ s/\s+/ /g;
     $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
@@ -73,13 +84,13 @@ sub _do_encode {
         s/\bNANTAND\b//   if $original =~ /\bwii\b/;     # Nintendo   <- Wii
         s/\bSACAR\b//     if $original =~ /\bfifa\b/;    # soccer     <- FIFA
         s/\bBASCATBAL\b// if $original =~ /\bnba\b/;     # basketball <- NBA
-        s/\bFATBAL\b//    if $original =~ /\bnfl\b/;     # football   <- NFL
+        s/\bFAT BAL\b//   if $original =~ /\bnfl\b/;     # football   <- NFL
         s/\bHACY\b//      if $original =~ /\bnhl\b/;     # hockey     <- NHL
     }
     for ($string) {
-        s/\bNFL\b//    if /\bMADAN\b/;        # NFL      <- Madden
+        s/\bNFL\b//    if /\bMAD DAN\b/;      # NFL      <- Madden
         s/\bGALf\b//   if /\bTAGAR WAD\b/;    # golf     <- Tiger Woods
-        s/\bFATBAL\b// if /\bBLITZ\b/;        # football <- blitz
+        s/\bFAT BAL\b// if /\bBLITZ\b/;       # football <- blitz
         s/\bHAGAG\b//  if /\bSANAC\b/;        # hedgehog <- Sonic
         s/\bCABAL\b//  if /\bDANGAR HAN\b/;   # Cabela's <- Dangerous Hunts
         s/\bBNX\b//    if /\bDAV MAR\b/;      # BMX      <- Dave Mirra
@@ -200,6 +211,7 @@ my %dictionary = map { $_ => 1 } qw(
     bell
     belt
     best
+    bike
     big
     bird
     bite
@@ -234,6 +246,7 @@ my %dictionary = map { $_ => 1 } qw(
     burger
     bush
     bust
+    butt
     cage
     cake
     caliber
@@ -243,6 +256,7 @@ my %dictionary = map { $_ => 1 } qw(
     cane
     car
     card
+    cart
     cat
     chip
     chrome
@@ -294,6 +308,7 @@ my %dictionary = map { $_ => 1 } qw(
     dorm
     double
     drag
+    dream
     drip
     drop
     dry
@@ -318,6 +333,7 @@ my %dictionary = map { $_ => 1 } qw(
     elm
     epic
     ever
+    excite
     exit
     extra
     eye
@@ -476,6 +492,7 @@ my %dictionary = map { $_ => 1 } qw(
     melt
     mesh
     mess
+    metal
     metroid
     milk
     mint
@@ -499,6 +516,7 @@ my %dictionary = map { $_ => 1 } qw(
     ogre
     old
     one
+    out
     owl
     pac
     pack
@@ -508,6 +526,7 @@ my %dictionary = map { $_ => 1 } qw(
     paper
     pawn
     peer
+    pilot
     ping
     pint
     pixy
@@ -526,6 +545,7 @@ my %dictionary = map { $_ => 1 } qw(
     pug
     pump
     pun
+    punch
     pure
     quiz
     race
@@ -577,6 +597,7 @@ my %dictionary = map { $_ => 1 } qw(
     side
     silk
     silo
+    sim
     sink
     six
     skin
@@ -616,6 +637,7 @@ my %dictionary = map { $_ => 1 } qw(
     talk
     tall
     tank
+    tanx
     task
     tax
     team
@@ -652,6 +674,7 @@ my %dictionary = map { $_ => 1 } qw(
     visa
     vote
     vow
+    walker
     wage
     war
     ward
@@ -669,6 +692,7 @@ my %dictionary = map { $_ => 1 } qw(
     whip
     wick
     wii
+    wind
     wine
     wing
     wise

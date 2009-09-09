@@ -745,7 +745,6 @@ my @tests = (
         q{nascar 07},
     ],
     [
-        q{The Ren and Stimpy Show Fire Dogs},
         q{ren & stimpy Fire Dogs},
         q{ren and stimpy Fire Dogs},
     ],
@@ -1380,6 +1379,8 @@ my @tests = (
     [
         q{Disney Sport Skateboarding },
         q{Disney Sports Skateboarding},
+    ],
+    [
         q{disney skateboarding},
         q{disney's skateboarding},
     ],
@@ -1455,7 +1456,6 @@ my @tests = (
     ],
     [
         q{Triple Play 2000},
-        q{triple play},
         q{triple play '00},
         q{triple play 00},
         q{tripple play 2000},
@@ -1550,9 +1550,6 @@ my @tests = (
         q{paper mario - thousand year door},
         q{paper mario and the thousand year door},
         q{paper mario and thousand year door},
-        q{paper mario: and the thousand},
-        q{paper mario: the thousand},
-        q{paper mario: thousand year},
     ],
     [
         q{Capcom Classic Collection},
@@ -1676,7 +1673,6 @@ my @tests = (
         q{tony hawks pro skater 3},
     ],
     [
-        q{Tokyo Xtreme Racer Zero},
         q{tokyo extreme},
         q{tokyo xtreme},
     ],
@@ -1700,9 +1696,7 @@ my @tests = (
     ],
     [
         q{Wrestlemania 2000},
-        q{wrestle mania},
         q{wrestle mania 2000},
-        q{wrestlemania},
         q{wrestlemania 00},
     ],
     [
@@ -1711,12 +1705,10 @@ my @tests = (
     ],
     [
         q{ISS 64 Soccer},
-        q{international superstar soccer},
         q{iss 64},
     ],
     [
         q{Super Mario Bros 3},
-        q{super mario 3},
         q{super mario bros. 3},
         q{super mario brothers 3},
     ],
@@ -1739,7 +1731,6 @@ my @tests = (
     [
         q{Pac-Attack},
         q{pac attack},
-        q{pacattack},
     ],
     [
         q{The Ren and Stimpy Show Buckeroos},
@@ -1815,7 +1806,6 @@ my @tests = (
     [
         q{Super Smash Bros.},
         q{smash brothers},
-        q{super smash},
     ],
     [
         q{Twisted Metal 2},
@@ -1947,15 +1937,12 @@ my @tests = (
         q{Advance Wars DS},
         q{advance wars dual strike},
         q{advance wars: dual strike},
-        q{dual strike},
     ],
     [
         q{WWE Wrestlemania X8},
         q{wrestlemania x8},
     ],
     [
-        q{Lord of the Rings Return of King},
-        q{Lord of the Rings: The Return of the King},
         q{lord of the rings - return},
         q{lord of the rings the return},
         q{lord of the rings: return},
@@ -1963,15 +1950,6 @@ my @tests = (
     [
         q{Mega Man Zero},
         q{megaman zero},
-    ],
-    [
-        q{Turok 2 Seeds of Evil},
-        q{turok seeds of evil},
-        q{turok: seeds of evil},
-    ],
-    [
-        q{Bart Meets Radioactive Man},
-        q{Bartman meets Radioactive Man},
     ],
     [
         q{yoshi's island},
@@ -1982,14 +1960,9 @@ my @tests = (
         q{joe & mac},
     ],
     [
-        q{Lego Star Wars 2 Original Trilogy},
-        q{Wars The Original Trilogy },
-    ],
-    [
         q{Super Mario Bros & Duck Hunt},
         q{Super Mario Bros and Duck Hunt},
         q{Super Mario Bros. & Duck Hunt},
-        q{Super Mario Bros.and Duck Hunt},
     ],
     [
         q{Crash Twinsanity},
@@ -2024,14 +1997,6 @@ my @tests = (
         q{vigilante 8 second offense},
     ],
     [
-        q{vigilante 8 2},
-        q{vigilante 8 2nd},
-    ],
-    [
-        q{.hack Infection},
-        q{dot hack infection},
-    ],
-    [
         q{Moto GP 3},
         q{motogp 3},
     ],
@@ -2055,12 +2020,6 @@ my @tests = (
         q{spider-man maximum carnage},
     ],
     [
-        q{Clayfighters 63 1/3},
-        q{clayfighter 63},
-        q{clayfighter 63 1/3},
-    ],
-    [
-        q{Tony Hawk 4},
         q{tony hawk pro skater 4},
         q{tony hawk's pro skater 4},
         q{tony hawks pro skater 4},
@@ -2068,7 +2027,6 @@ my @tests = (
     [
         q{Harvest Moon Friends Mineral Town},
         q{harvest moon - friends of mineral town},
-        q{harvest moon friends},
         q{harvest moon: friends of mineral town},
     ],
     [
@@ -2166,10 +2124,6 @@ my @tests = (
         q{NASCAR Thunder 2002},
     ],
     [
-        q{The Bee Movie Game},
-        q{bee movie},
-    ],
-    [
         q{Dance Dance Revolution Ultramix},
         q{ddr ultramix},
     ],
@@ -2185,7 +2139,6 @@ my @tests = (
     [
         q{Dance Dance Revolution Max},
         q{ddr max},
-        q{ddrmax},
     ],
     [
         q{Lufia and The Rise of Sinistrals},
@@ -2208,7 +2161,6 @@ my @tests = (
         q{Kings Field 2},
     ],
     [
-        q{18 Wheeler American Pro Trucker},
         q{18 wheeler},
         q{Eighteen Wheeler},
     ],
@@ -2259,7 +2211,6 @@ my @tests = (
         q{Medal of Honor: European Assault },
     ],
     [
-        q{NASCAR 2006 Total Team Control},
         q{nascar 06},
         q{nascar 2006},
     ],
@@ -2299,10 +2250,6 @@ my @tests = (
         q{tiger woods 08},
         q{tiger woods 2008},
         q{tiger woods pga 2008},
-    ],
-    [
-        q{Hot Wheels Burnin Rubber},
-        q{Hotwheels burning},
     ],
     [
         q{NASCAR Thunder 03},
@@ -2352,19 +2299,16 @@ my @tests = (
     ],
     [
         q{Ace Combat 4},
-        q{ace combat 04},
         q{ace kombat 4},
     ],
     [
         q{Battletanx Global Assault},
         q{battle tank global assault},
         q{battle tanx global assault},
-        q{battletanx: global},
     ],
     [
         q{Fire Emblem Sacred Stones},
         q{fire emblem - sacred stones},
-        q{fire emblem sacred},
         q{fire emblem: sacred stones},
     ],
     [
