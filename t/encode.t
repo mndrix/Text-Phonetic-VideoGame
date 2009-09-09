@@ -2664,7 +2664,6 @@ my @tests = (
         q{Chromehounds},
     ],
     [
-        q{Sarge�s Heroes},
         q{sarge's heroes},
         q{sarges heroes},
     ],
