@@ -97,6 +97,7 @@ sub _do_encode {
         s/\bW\b//      if /\bRASTL MAN\b/;    # WWE      <- Wrestlemania
     }
 
+    $string =~ s/X\b/C/g;      # "TANX" -> "TANC" etc
     $string =~ s/\s+/ /g;
     $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
     return $string;

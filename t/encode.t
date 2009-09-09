@@ -303,7 +303,6 @@ my @tests = (
     [
         q{Dance Dance Revolution Max 2},
         q{ddr max 2},
-        q{ddrm 2},
     ],
     [
         q{Grand Theft Auto Collector's},
@@ -2112,12 +2111,6 @@ my @tests = (
     [
         q{Street Fighter 2 turbo},
         q{Street Fighter II Turbo},
-    ],
-    [
-        q{eddy mis-adventures},
-        q{eddy mis-edventures},
-        q{eddy misadventures},
-        q{eddy misedventures},
     ],
     [
         q{NASCAR Thunder 02},
