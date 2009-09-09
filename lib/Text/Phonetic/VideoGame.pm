@@ -60,17 +60,17 @@ sub _do_encode {
 
     $string =~ s/\s+/ /g;
     $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
-    my @words = map { $self->split_compound_word($_) } split / /, $string;
-
-    # do some in-place substitutions
-    for my $word (@words) {
-        $word = $self->word2num($word);
-        $word = Roman::arabic($word) if Roman::isroman($word);
-    }
 
     # normalize numbers that might be years
     $string =~ s/\b(7|8|9)([0-9])\b/19$1$2/g;  # 97 -> 1997
     $string =~ s/\b(0|1|2)([0-9])\b/20$1$2/g;  # 03 -> 2003
+
+    # do some in-place substitutions
+    my @words = map { $self->split_compound_word($_) } split / /, $string;
+    for my $word (@words) {
+        $word = $self->word2num($word);
+        $word = Roman::arabic($word) if Roman::isroman($word);
+    }
 
     my @encodings = map { /^\d+$/ ? $_ : String::Nysiis::nysiis($_) } @words;
     return join ' ', @encodings;
