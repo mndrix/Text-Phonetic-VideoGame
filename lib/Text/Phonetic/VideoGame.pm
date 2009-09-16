@@ -33,7 +33,6 @@ my %abbreviation = (
     nam  => 'vietnam',
     ny   => 'new york',
     pgr  => 'project gotham racing',
-    sk8  => 'skate',
     t2   => 'terminator 2',
     tmnt => 'teenage mutant ninja turtles',
     wwf  => 'wwe',
@@ -59,14 +58,15 @@ sub _do_encode {
 
     $string =~ s{[-/:]}{ }g;     # dashes, slashes are like spaces
     $string =~ s/[&.'"]//g;     # most punctuation can be ignored
-    $string =~ s/\b([1-9])(st|nd|rd|th)\b/$ordinal{"$1$2"}/ge;
-    $string =~ s/\bv(\d)\b/volume $1/g;
-    $string =~ s/\b2k([0-9])\b/200$1/ig;   # 2K4 -> 2004
-    $string =~ s/(\D)(\d)/$1 $2/g;  # "xbox360", "kombat4", etc
 
     # expand some common abbreviations
     my $abbr = join '|', keys(%abbreviation);
     $string =~ s/\b($abbr)\b/$abbreviation{$1}/ge;
+
+    $string =~ s/\b([1-9])(st|nd|rd|th)\b/$ordinal{"$1$2"}/ge;
+    $string =~ s/\bv(\d)\b/volume $1/g;
+    $string =~ s/\b2k([0-9])\b/200$1/ig;   # 2K4 -> 2004
+    $string =~ s/(\D)(\d)/$1 $2/g;  # "xbox360", "kombat4", etc
 
     # remove some noise words
     $string =~ s/\b(n|a|an|the|and|of|vs|at|in|for|if)\b//g;

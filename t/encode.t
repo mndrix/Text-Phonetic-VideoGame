@@ -48,11 +48,6 @@ my @tests = (
         q{Pirates of the Caribbean: At Worlds End},
     ],
     [
-        q{Brothers in Arms Road to Hill},
-        q{Brothers in Arms Road to Hill 30},
-        q{Brothers in Arms: Road to Hill 30},
-    ],
-    [
         q{Bart's Nightmare},
         q{Barts Nightmare},
     ],
@@ -932,10 +927,6 @@ my @tests = (
         q{Tomb Raider The Last Revelation },
     ],
     [
-        q{American Sk8land},
-        q{american skateland},
-    ],
-    [
         q{Phoenix Wright - Ace Attorney},
         q{Phoenix Wright Ace Attorney},
         q{Phoenix Wright: Ace Attorney},
@@ -1050,7 +1041,6 @@ my @tests = (
     [
         q{Dead or Alive 2},
         q{doa 2},
-        q{doa2},
     ],
     [
         q{baldur's gate},
