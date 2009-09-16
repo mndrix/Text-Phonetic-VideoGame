@@ -6,6 +6,7 @@ use base 'Text::Phonetic';
 use String::Nysiis;
 use Roman ();
 use Lingua::EN::Inflect::Number qw( to_S );
+use List::MoreUtils qw( uniq );
 
 our $VERSION = '0.01';
 my %ordinal = (
@@ -115,7 +116,10 @@ sub _do_encode {
     $string =~ s/\bCRASN\b/CRASAN/g;
     $string =~ s/\s+/ /g;
     $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
-    return $string;
+
+    # remove duplicates and sort
+    @words = uniq sort split /\s+/, $string;
+    return join ' ', @words;
 }
 
 # returns an arabic numeral representation of number word
