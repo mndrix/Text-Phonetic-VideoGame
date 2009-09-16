@@ -2507,6 +2507,10 @@ my @tests = (
         q{Far Cry Instincts Evolution},
         q{Farcry Instincts Evolution},
     ],
+    [
+        q{super mario},
+        q{supermario},
+    ],
 );
 
 plan tests => scalar @tests;
