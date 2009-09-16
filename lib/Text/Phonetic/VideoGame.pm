@@ -75,10 +75,6 @@ sub _do_encode {
     $string =~ s/\s+/ /g;
     $string =~ s/^\s+|\s+$//g; # remove leading/trailing spaces
 
-    # normalize numbers that might be years
-    $string =~ s/\b(7|8|9)([0-9])\b/19$1$2/g;  # 97 -> 1997
-    $string =~ s/\b(0|1|2)([0-9])\b/20$1$2/g;  # 03 -> 2003
-
     # do some in-place substitutions
     my @words = map { $self->split_compound_word($_) } split / /, $string;
     for my $word (@words) {
@@ -88,6 +84,10 @@ sub _do_encode {
 
     my @encodings = map { /^\d+$/ ? $_ : String::Nysiis::nysiis($_) } @words;
     $string = join ' ', @encodings;
+
+    # normalize numbers that might be years
+    $string =~ s/\b(7|8|9)([0-9])\b/19$1$2/g;  # 97 -> 1997
+    $string =~ s/\b(0|1|2)([0-9])\b/20$1$2/g;  # 03 -> 2003
 
     # remove redundant words
     $string =~ s/\b(\d+)\s\1\b/$1/g;    # 2 2 -> 2
