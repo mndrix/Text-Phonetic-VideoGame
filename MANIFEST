@@ -4,5 +4,6 @@ Makefile.PL
 README
 lib/Text/Phonetic/VideoGame.pm
 t/00-load.t
-t/pod-coverage.t
+t/encode.t
 t/pod.t
+t/split-compounds.t

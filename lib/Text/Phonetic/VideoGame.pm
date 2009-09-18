@@ -786,23 +786,61 @@ Text::Phonetic::VideoGame - phonetic encoding for video game titles
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
-
     use Text::Phonetic::VideoGame;
+    my $phonetic = Text::Phonetic::VideoGame->new;
+    my $first = $phonetic->encode('super smash brothers');
+    my $second = $phonetic->encode('Super Smash Bros.');
+    warn "They match\n" if $first eq $second;
 
-    my $foo = Text::Phonetic::VideoGame->new();
-    ...
+    warn "They match\n" if $phonetic->compare('ff 7', 'final fantasy vii');
 
-=head1 EXPORT
+This module implements a phonetic algorithm for the comparison of video game
+titles.  It uses L<String::Nysiis> to disambiguate common English typos and
+adds additional rules which apply specifically to typos in video game titles.
 
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
+The module implements the L<Text::Phonetic> interface.  See that documentation
+for details about the interface.
 
-=head1 FUNCTIONS
+=head1 METHODS
 
-=head2 function1
+See L<Text::Phonetic>.
+
+=head1 VARIATIONS HANDLED
+
+=head2 Common English Typos
+
+L<String::Nysiis> handles common English typos such as misspellings of proper
+names which makes titles like "adams family" match "addams family".
+
+=head2 Punctuation Variants
+
+Most punctuation and its variants are handled correctly.  For instance "tom &
+jerry" and "tom and jerry" or "Lord of the Rings: Two Towers" with and without
+the colon.
+
+=head2 Common Abbreviations
+
+Abbreviations such as "bros" for "brothers" and "TMNT" for "Teenage Mutant
+Ninja Turtles".
+
+=head2 Canonical Years
+
+The titles "NFL 2004", "NFL '04" and "NFL 2K4" all hash to the same code.
+
+=head2 Canonical Numbers
+
+Roman numerals, ordinal numbers and spelled out numbers are recognized as
+being equal.
+
+=head2 Compound Words
+
+The game titles "mega man" and "megaman" are recognized as being identical.
+
+=head2 Word Order
+
+The order of certain parts of a title are often confused.  For instance,
+"Sonic Adventure 2: Battle" and "Sonic Adventure: Battle 2" both indicate the
+same game.
 
 =head1 AUTHOR
 
@@ -816,37 +854,14 @@ L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Text-Phonetic-VideoGame>.  I
 will be notified, and then you'll automatically be notified of progress on
 your bug as I make changes.
 
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc Text::Phonetic::VideoGame
-
-You can also look for information at:
-
-=over 4
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Text-Phonetic-VideoGame>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Text-Phonetic-VideoGame>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Text-Phonetic-VideoGame>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Text-Phonetic-VideoGame/>
-
-=back
-
+The source code is available on GitHub:
+L<http://github.com/mndrix/Text-Phonetic-VideoGame>  Patches and pull requests
+are welcome.
 
 =head1 ACKNOWLEDGEMENTS
 
+Thanks to JJGames (L<http://www.jjgames.com>) and Video Game Price Charts
+(L<http://vgpc.com>) for sponsoring development of this module.
 
 =head1 COPYRIGHT & LICENSE
 
