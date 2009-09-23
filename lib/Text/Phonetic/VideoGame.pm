@@ -334,11 +334,13 @@ my %dictionary = map { $_ => 1 } qw(
     dock
     dog
     dogs
+    donkey
     doo
     dope
     dorm
     double
     drag
+    dragon
     dream
     drip
     drop
@@ -386,6 +388,7 @@ my %dictionary = map { $_ => 1 } qw(
     fit
     flag
     flat
+    fly
     foal
     foil
     fold
@@ -486,6 +489,7 @@ my %dictionary = map { $_ => 1 } qw(
     keep
     kill
     king
+    kong
     kingdom
     kit
     kite

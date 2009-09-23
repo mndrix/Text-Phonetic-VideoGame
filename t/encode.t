@@ -430,6 +430,7 @@ my @tests = (
     [
         q{Donkey Kong Country 2},
         q{Donkey Kong Kountry 2},
+        q{donkeykong country 2},
     ],
     [
         q{Super Mario Bros & Duck Hunt & World Class Track Meet},
@@ -1058,6 +1059,7 @@ my @tests = (
     [
         q{Spyro Enter the Dragonfly},
         q{spyro: Enter the Dragonfly},
+        q{spyro: Enter the Dragon fly},
     ],
     [
         q{NCAA Football 2007},
