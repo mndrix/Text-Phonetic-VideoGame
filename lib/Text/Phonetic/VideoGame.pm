@@ -28,6 +28,7 @@ my %abbreviation = (
     ff   => 'final fantasy',
     gta  => 'grand theft auto',
     iss  => 'international superstar soccer',
+    kotr => 'knights of the old republic',
     le   => 'limited edition',
     motocross => 'motorcross',
     nam  => 'vietnam',

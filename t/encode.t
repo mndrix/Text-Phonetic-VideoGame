@@ -2513,6 +2513,10 @@ my @tests = (
         q{super mario},
         q{supermario},
     ],
+    [
+        q{kotr 2},
+        q{knights of old republic 2},
+    ],
 );
 
 plan tests => scalar @tests;
