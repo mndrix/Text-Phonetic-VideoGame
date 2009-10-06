@@ -2517,6 +2517,14 @@ my @tests = (
         q{kotr 2},
         q{knights of old republic 2},
     ],
+    [
+        q{Moto GP - Used},
+        q{Moto GP},
+    ],
+    [
+        q{Karaoke Revolution Country},
+        q{Karaoke Revolution Country - Game Only},
+    ],
 );
 
 plan tests => scalar @tests;
