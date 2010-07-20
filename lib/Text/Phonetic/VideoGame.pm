@@ -26,6 +26,7 @@ my %abbreviation = (
     csi  => 'crime scene investigation',
     ddr  => 'dance dance revolution',
     doa  => 'dead or alive',
+    dora => 'dora the explorer',
     ff   => 'final fantasy',
     gta  => 'grand theft auto',
     iss  => 'international superstar soccer',

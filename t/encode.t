@@ -2526,10 +2526,6 @@ my @tests = (
         q{Karaoke Revolution Country - Game Only},
     ],
     [
-        q{Defendin' de Penguin},
-        q{Defendin' DePenguin},
-    ],
-    [
         q{Ninja Bread Man},
         q{Ninjabread Man},
     ],
