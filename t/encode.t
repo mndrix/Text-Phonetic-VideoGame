@@ -2525,6 +2525,90 @@ my @tests = (
         q{Karaoke Revolution Country},
         q{Karaoke Revolution Country - Game Only},
     ],
+    [
+        q{Defendin' de Penguin},
+        q{Defendin' DePenguin},
+    ],
+    [
+        q{Ninja Bread Man},
+        q{Ninjabread Man},
+    ],
+    [
+        q{Bass Fishing},
+        q{Sega Bass Fishing},
+    ],
+    [
+        q{Avatar: The Game},
+        q{James Cameron's Avatar: The Game},
+    ],
+    [
+        q{MLB 2K10},
+        q{Major League Baseball 2K10},
+    ],
+    [
+        q{Hot Wheels: Battle Force 5},
+        q{Hot Wheels: Battleforce 5},
+    ],
+    [
+        q{Dora Saves the Crystal Kingdom},
+        q{Dora the Explorer: Dora Saves the Crystal Kingdom},
+    ],
+    [
+        q{SpeedZone},
+        q{Speed Zone},
+    ],
+    [
+        q{Cake Mania In The Mix},
+        q{Cake Mania: In the Mix!},
+    ],
+    [
+        q{CSI Hard Evidence},
+        q{CSI: Crime Scene Investigation: Hard Evidence},
+    ],
+    [
+        q{EA Smarty Pants},
+        q{Smarty Pants},
+    ],
+    [
+        q{Barbie Island Princess},
+        q{Barbie as the Island Princess},
+    ],
+    [
+        q{Spyro The Eternal Night},
+        q{The Legend of Spyro: The Eternal Night},
+    ],
+    [
+        q{Splinter Cell Double Agent},
+        q{Tom Clancy's Splinter Cell: Double Agent},
+    ],
+    [
+        q{SpongeBob SquarePants Creature from Krusty Krab},
+        q{Spongebob: Creature From Krusty Krab},
+    ],
+    [
+        q{Playground},
+        q{EA Playground},
+    ],
+    [
+        q{Lara Croft Tomb Raider Anniversary},
+        q{Tomb Raider Anniversary},
+    ],
+    [
+        q{Disney Think Fast},
+        q{Think Fast},
+    ],
+    [
+        q{Lego Batman The Videogame},
+        q{LEGO Batman},
+    ],
+    [
+        q{Legend of Zelda: Twilight Princess},
+        q{Zelda: Twilight Princess},
+    ],
+    [
+        q{Bigs 2, The},
+        q{The Bigs 2},
+    ],
 );
 
 plan tests => scalar @tests;
