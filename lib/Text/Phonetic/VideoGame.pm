@@ -71,7 +71,7 @@ sub _do_encode {
     my $original = $string;
 
     $string =~ s{[-/:]}{ }g;     # dashes, slashes are like spaces
-    $string =~ s/[&.'"]//g;     # most punctuation can be ignored
+    $string =~ s/[&.'",]//g;     # most punctuation can be ignored
 
     # remove useless publisher names (usually found at the front)
     $string =~ s/^(?:$publishers)\b//;
