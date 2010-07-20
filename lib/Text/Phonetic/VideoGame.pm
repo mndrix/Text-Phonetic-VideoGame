@@ -97,6 +97,7 @@ sub _do_encode {
     my @words = map { $self->split_compound_word($_) } split / /, $string;
     for my $word (@words) {
         $word = $self->word2num($word);
+        next if $word eq 'mix';  # looks Roman but is rarely meant that way
         $word = Roman::arabic($word) if Roman::isroman($word);
     }
 
