@@ -23,6 +23,7 @@ my %ordinal = (
 my %abbreviation = (
     breathe => 'breath',   # NYSIIS handles this case poorly
     bros => 'brothers',
+    csi  => 'crime scene investigation',
     ddr  => 'dance dance revolution',
     doa  => 'dead or alive',
     ff   => 'final fantasy',
@@ -30,14 +31,17 @@ my %abbreviation = (
     iss  => 'international superstar soccer',
     kotr => 'knights of the old republic',
     le   => 'limited edition',
+    mlb  => 'major league baseball',
     motocross => 'motorcross',
     nam  => 'vietnam',
     ny   => 'new york',
     pgr  => 'project gotham racing',
+    spongebob => 'spongebob squarepants',
     t2   => 'terminator 2',
     tmnt => 'teenage mutant ninja turtles',
     wwf  => 'wwe',
     xtreme => 'extreme',
+    zelda => 'the legend of zelda',
 
     # easier than using a words to numbers module
     eighteen => 18,
