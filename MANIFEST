@@ -15,7 +15,7 @@ Makefile.PL
 MANIFEST
 META.yml
 README
-t/00-load.t
 t/encode.t
+t/no-match.t
 t/pod.t
 t/split-compounds.t

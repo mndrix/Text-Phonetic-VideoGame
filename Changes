@@ -1,5 +1,13 @@
 Revision history for Text-Phonetic-VideoGame
 
+0.03    Tue Jul 20 18:10:13 UTC 2010
+        Add more dictionary words
+        Add more abbreviations
+        Handle more redundant phrases
+        Remove useless publisher names
+        Handle commas properly
+        Ignore words that look like Roman numerals but aren't
+
 0.02    Wed Sep 23 19:43:40 UTC 2009
         Add dragon, donkey, fly and kong to the dictionary
         KOTR is an abbreviation for Knights of the Old Republic

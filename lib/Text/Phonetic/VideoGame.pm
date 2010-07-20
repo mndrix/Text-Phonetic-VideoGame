@@ -8,7 +8,7 @@ use Roman ();
 use Lingua::EN::Inflect::Number qw( to_S );
 use List::MoreUtils qw( uniq );
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 my %ordinal = (
     '1st' => 'first',
     '2nd' => 'second',
