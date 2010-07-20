@@ -264,6 +264,7 @@ my %dictionary = map { $_ => 1 } qw(
     boy
     brain
     brat
+    bread
     break
     brew
     buck
@@ -396,6 +397,7 @@ my %dictionary = map { $_ => 1 } qw(
     food
     fool
     foot
+    force
     fort
     fox
     francisco
@@ -555,6 +557,7 @@ my %dictionary = map { $_ => 1 } qw(
     navy
     night
     nine
+    ninja
     north
     nuke
     oak
@@ -776,6 +779,7 @@ my %dictionary = map { $_ => 1 } qw(
     year
     york
     zero
+    zone
     zoom
 );
 sub is_word {
