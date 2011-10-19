@@ -10,6 +10,10 @@ my @tests = (
         q{Pandora Tomorrow},
         q{Dora: Tomorrow},
     ],
+    [
+        q{Playstation 3 system 40GB},
+        q{Playstation 3 system 80GB},
+    ]
 );
 
 plan tests => scalar @tests;

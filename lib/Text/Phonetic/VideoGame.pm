@@ -90,6 +90,7 @@ sub _do_encode {
     $string =~ s/sk8/skate/g;
     $string =~ s/\b([1-9])(st|nd|rd|th)\b/$ordinal{"$1$2"}/ge;
     $string =~ s/\bv(\d)\b/volume $1/g;
+    $string =~ s/\b(\d+)gb\b/$1 gb/g;      # 40GB -> 40 GB
     $string =~ s/\b2k([0-9])\b/200$1/ig;   # 2K4 -> 2004
     $string =~ s/\b(\d+)k\b/${1}000/g;       # 40K -> 40000
     $string =~ s/(\D)(\d)/$1 $2/g;  # "xbox360", "kombat4", etc

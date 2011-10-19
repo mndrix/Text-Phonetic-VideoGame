@@ -2705,6 +2705,10 @@ my @tests = (
         q{Sherlock Holmes vs. Jack the Ripper},
         q{Sherlock Holmes Versus Jack the Ripper},
     ],
+    [
+        q{Playstation 3 system 40GB},
+        q{Playstation 3 system 40 GB},
+    ]
 );
 
 plan tests => scalar @tests;
