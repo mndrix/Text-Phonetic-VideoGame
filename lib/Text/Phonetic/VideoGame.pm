@@ -361,6 +361,7 @@ my %dictionary = map { $_ => 1 } qw(
     dope
     dorm
     double
+    down
     drag
     dragon
     dream
@@ -386,6 +387,7 @@ my %dictionary = map { $_ => 1 } qw(
     elf
     elk
     elm
+    end
     epic
     ever
     excite
@@ -421,8 +423,10 @@ my %dictionary = map { $_ => 1 } qw(
     fort
     fox
     francisco
+    free
     front
     fuel
+    fun
     fury
     fuse
     game
@@ -433,6 +437,7 @@ my %dictionary = map { $_ => 1 } qw(
     gem
     gene
     germ
+    ghost
     gig
     girl
     glen
@@ -487,6 +492,7 @@ my %dictionary = map { $_ => 1 } qw(
     house
     howl
     hub
+    hunter
     hurt
     hymn
     ice
@@ -506,6 +512,7 @@ my %dictionary = map { $_ => 1 } qw(
     joke
     jot
     jug
+    jump
     junk
     kart
     keel
@@ -596,8 +603,10 @@ my %dictionary = map { $_ => 1 } qw(
     palm
     pant
     paper
+    parents
     park
     pawn
+    pay
     peer
     pilot
     ping
@@ -671,6 +680,7 @@ my %dictionary = map { $_ => 1 } qw(
     shift
     ship
     shock
+    shoot
     shore
     sick
     side
@@ -706,6 +716,7 @@ my %dictionary = map { $_ => 1 } qw(
     spy
     square
     star
+    start
     station
     steel
     stem
@@ -720,6 +731,7 @@ my %dictionary = map { $_ => 1 } qw(
     swim
     switch
     tail
+    take
     talk
     tall
     tank
@@ -790,6 +802,7 @@ my %dictionary = map { $_ => 1 } qw(
     wise
     wolf
     womb
+    wonder
     wood
     world
     worm

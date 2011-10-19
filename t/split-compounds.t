@@ -14,6 +14,17 @@ my %tests = (
     'megaman'      => [ 'mega', 'man'      ],
     'softball'     => [ 'soft', 'ball'     ],
     'starfox'      => [ 'star', 'fox'      ],
+    'funhouse'     => [ 'fun',  'house'    ],
+    'endwar'       => [ 'end',  'war'      ],
+    'wonderworld'  => [ 'wonder', 'world'  ],
+    'oddparents'   => [ 'odd',   'parents' ],
+    'spyhunter'    => [ 'spy',   'hunter'  ],
+    'jumpstart'    => [ 'jump',  'start'   ],
+    'payback'      => [ 'pay',   'back'    ],
+    'ghosthunter'  => [ 'ghost', 'hunter'  ],
+    'shootout'     => [ 'shoot', 'out'     ],
+    'takedown'     => [ 'take',  'down'    ],
+    'freefall'     => [ 'free',  'fall'    ],
 
     # some words that shouldn't be split
     'fantasy' => [ 'fantasy' ],
