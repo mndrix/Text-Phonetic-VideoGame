@@ -2605,6 +2605,106 @@ my @tests = (
         q{Bigs 2, The},
         q{The Bigs 2},
     ],
+    [
+        q{I Spy Funhouse},
+        q{I Spy Fun House},
+    ],
+    [
+        q{Tom Clancy's End War},
+        q{Tom Clancy's EndWar},
+    ],
+    [
+        q{Tony Hawk American Skateland},
+        q{Tony Hawk's American Sk8land},
+    ],
+    [
+        q{Jagged Alliance DS},
+        q{Jagged Alliance},
+    ],
+    [
+        q{Namco Museum},
+        q{Namco Museum DS},
+    ],
+    [
+        q{Wonderworld Amusement Park},
+        q{Wonder World Amusement Park},
+    ],
+    [
+        q{Warhammer 40k Squad Command},
+        q{Warhammer 40,000: Squad Command},
+    ],
+    [
+        q{Mario Party 7 w/ Microphone},
+        q{Mario Party 7 with Microphone},
+    ],
+    [
+        q{Fairly Odd Parents Shadow Showdown},
+        q{The Fairly OddParents: Shadow Showdown},
+    ],
+    [
+        q{Bad Boys Miami Takedown},
+        q{Bad Boys: Miami Take Down},
+    ],
+    [
+        q{SpyHunter 2},
+        q{Spy Hunter 2},
+    ],
+    [
+        q{Aliens vs. Predator Extinction},
+        q{Aliens Versus Predator: Extinction},
+    ],
+    [
+        q{Mister Mosquito},
+        q{Mr. Mosquito},
+    ],
+    [
+        q{Jump Start Pet Rescue},
+        q{JumpStart Pet Rescue},
+    ],
+    [
+        q{Pro Bull Riders: Out of the Chute},
+        q{PBR Out of the Chute},
+    ],
+    [
+        q{Soldier of Fortune: Pay Back},
+        q{Soldier Of Fortune Payback},
+    ],
+    [
+        q{Ghost Hunter},
+        q{Ghosthunter},
+    ],
+    [
+        q{Spyhunter: Nowhere To Run},
+        q{Spy Hunter Nowhere to Run},
+    ],
+    [
+        q{Warhammer 40K Fire Warrior},
+        q{Warhammer 40000 Fire Warrior},
+    ],
+    [
+        q{NBA Shoot Out 2001},
+        q{NBA ShootOut 2001},
+    ],
+    [
+        q{Bad Boys: Miami Take Down},
+        q{Bad Boys Miami Takedown},
+    ],
+    [
+        q{Gundam: Federation vs. Zeon},
+        q{Mobile Suit Gundam Federation vs Zeon},
+    ],
+    [
+        q{Gundam Vs Zeta Gundam},
+        q{Mobile Suit Gundam: Gundam vs. Zeta Gundam},
+    ],
+    [
+        q{Uno Free Fall},
+        q{Uno Freefall},
+    ],
+    [
+        q{Sherlock Holmes vs. Jack the Ripper},
+        q{Sherlock Holmes Versus Jack the Ripper},
+    ],
 );
 
 plan tests => scalar @tests;
