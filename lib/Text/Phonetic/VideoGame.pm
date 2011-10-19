@@ -38,6 +38,7 @@ my %abbreviation = (
     ny   => 'new york',
     pgr  => 'project gotham racing',
     spongebob => 'spongebob squarepants',
+    spyro => 'legend spyro',
     t2   => 'terminator 2',
     tmnt => 'teenage mutant ninja turtles',
     wwf  => 'wwe',
@@ -130,7 +131,6 @@ sub _do_encode {
         s/\bSPANG BAB\b// if /\bSGAR PAN\b/;  # Sponge Bob <- Square Pants
         s/\bRASC RANGAR\b// if /\bCAP DAL\b/; # Rescue Rangers <- Chip & Dale
         s/\bLAR CRAFT\b//   if /\bTANB RADAR\b/; # Lara Croft  <- Tomb Raider
-        s/\bLAGAN\b//       if /\bLAGAN SPAR\b/; # Legend <- Legend of Spyro
     }
 
     $string =~ s/X\b/C/g;      # "TANX" -> "TANC" etc
