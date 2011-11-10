@@ -2706,6 +2706,9 @@ my @tests = (
         q{Sherlock Holmes Versus Jack the Ripper},
     ],
     [
+        q{Hasbro Family Game Night 4: The Game Show},
+        q{Family Game Night 4: The Game Show},
+    ],
     [
         q{Rabbids Travel in Time},
         q{Raving Rabbids: Travel in Time},

@@ -67,6 +67,7 @@ my $publishers = join '|', (
     'disney',
     'disneys',
     'ea',
+    'hasbro',
     'james camerons',
     'sega',
     'tom clancys',
