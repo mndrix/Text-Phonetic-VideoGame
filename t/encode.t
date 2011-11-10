@@ -2706,6 +2706,11 @@ my @tests = (
         q{Sherlock Holmes Versus Jack the Ripper},
     ],
     [
+    [
+        q{Rabbids Travel in Time},
+        q{Raving Rabbids: Travel in Time},
+    ],
+    [
         q{Playstation 3 system 40GB},
         q{Playstation 3 system 40 GB},
     ]

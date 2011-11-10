@@ -39,6 +39,7 @@ my %abbreviation = (
     ny   => 'new york',
     pbr  => 'pro bull riders',
     pgr  => 'project gotham racing',
+    rabbids => 'raving rabbids',
     spongebob => 'spongebob squarepants',
     spyro => 'legend spyro',
     t2   => 'terminator 2',
