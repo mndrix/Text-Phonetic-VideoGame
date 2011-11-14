@@ -98,7 +98,7 @@ sub _do_encode {
     $string =~ s/(\D)(\d)/$1 $2/g;  # "xbox360", "kombat4", etc
 
     # remove some noise words
-    $string =~ s/\b(videogame|video game|as|ds)\b//g;
+    $string =~ s/\b(videogame|video game|as|ds|3d)\b//g;
     $string =~ s/\b(n|a|an|the|and|of|vs|at|in|for|if|game only|with)\b//g;
     $string =~ s/\b(edition|volume|vol|versus|game|games|used)\b//g;
 

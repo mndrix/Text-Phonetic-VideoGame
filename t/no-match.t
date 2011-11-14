@@ -11,6 +11,10 @@ my @tests = (
         q{Dora: Tomorrow},
     ],
     [
+        q{Nintendo 3DS},
+        q{Nintendo DS},
+    ],
+    [
         q{Playstation 3 system 40GB},
         q{Playstation 3 system 80GB},
     ]
